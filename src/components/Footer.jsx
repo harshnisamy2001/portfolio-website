@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Navigation Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-xs text-emerald-200">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-xs text-emerald-200 w-full text-left">
           <div>
             <div className="uppercase font-bold text-white mb-3 text-sm">Navigation</div>
             <ul className="flex flex-col gap-2">

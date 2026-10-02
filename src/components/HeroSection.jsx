@@ -5,7 +5,7 @@ import { personalInfo } from '../data/cvData';
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-gradient-to-b from-[#f0fdf4] to-white border-b border-emerald-100" id="home">
+    <section className="w-full bg-gradient-to-b from-[#f0fdf4] to-white border-b border-emerald-100 scroll-mt-[75px]" id="home">
       <main className="flex flex-col gap-10 py-16 sm:py-24 px-4 md:px-8 max-w-[1200px] mx-auto items-center text-center">
         
         {/* Morphing Selfie Image Frame - Centered */}

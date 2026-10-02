@@ -5,8 +5,8 @@ import { personalInfo } from '../data/cvData';
 
 export default function ContactSection() {
   return (
-    <section className="w-full bg-[#f0fdf4]/50 border-b border-emerald-100" id="contact">
-      <main className="flex flex-col gap-10 py-20 sm:py-24 px-4 md:px-8 md:max-w-[1200px] md:mx-auto">
+    <section className="w-full bg-[#f0fdf4]/50 border-b border-emerald-100 scroll-mt-[75px]" id="contact">
+      <main className="flex flex-col gap-10 py-20 sm:py-24 px-4 md:px-8 max-w-[1200px] mx-auto">
         
         {/* Title */}
         <div className="text-center">

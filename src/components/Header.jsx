@@ -51,10 +51,10 @@ export default function Header({ onOpenCv }) {
           </a>
 
           {/* Navigation Links & Primary Top CV Button */}
-          <div className="flex items-center gap-4 lg:gap-6">
+          <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
             
-            {/* Nav Items (Desktop & Tablet) */}
-            <ul className="hidden lg:flex flex-row gap-5 xl:gap-6 items-center font-medium text-[#1f2937]">
+            {/* Nav Items (Desktop) */}
+            <ul className="hidden xl:flex flex-row gap-5 xl:gap-6 items-center font-medium text-[#1f2937]">
               {menuItems.map((item) => (
                 <li key={item.id}>
                   <a
@@ -72,15 +72,15 @@ export default function Header({ onOpenCv }) {
             {/* SINGLE DEDICATED PREVIEW / DOWNLOAD CV BUTTON AT THE TOP */}
             <button
               onClick={onOpenCv}
-              className="flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#047857] hover:to-[#059669] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#059669]/20 transition-all cursor-pointer shrink-0"
+              className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#047857] hover:to-[#059669] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#059669]/20 transition-all cursor-pointer shrink-0"
               title="Preview & Download CV"
             >
-              <FileText className="w-4 h-4" />
-              <span>Preview / Download CV</span>
+              <FileText className="w-4 h-4 shrink-0" />
+              <span><span className="hidden sm:inline">Preview / </span>Download CV</span>
             </button>
 
-            {/* Mobile Menu Icon */}
-            <div className="lg:hidden">
+            {/* Mobile / Tablet Menu Icon */}
+            <div className="xl:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-[#059669] hover:text-[#047857]"
@@ -99,7 +99,7 @@ export default function Header({ onOpenCv }) {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed top-[75px] left-0 right-0 bg-white border-b border-[#059669]/20 shadow-xl z-40 py-5 px-6">
+        <div className="xl:hidden fixed top-[75px] left-0 right-0 bg-white border-b border-[#059669]/20 shadow-xl z-40 py-5 px-6">
           <ul className="flex flex-col gap-4 text-center font-medium">
             {menuItems.map((item) => (
               <li key={item.id}>

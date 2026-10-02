@@ -3,10 +3,10 @@ import { raifStyleSkills } from '../data/cvData';
 
 export default function SkillsSection() {
   return (
-    <section className="w-full bg-[#f0fdf4]/50 border-b border-emerald-100" id="skills">
+    <section className="w-full bg-[#f0fdf4]/50 border-b border-emerald-100 scroll-mt-[75px]" id="skills">
       <main className="flex flex-col gap-10 py-20 sm:py-24 px-4 md:px-8 max-w-[1200px] mx-auto">
         
-        {/* Section Title */}
+        {/* Section Title - Centered */}
         <div className="text-center">
           <h2 className="text-sm uppercase text-[#059669] font-bold mx-auto pb-1 w-max">
             Skills
@@ -17,13 +17,13 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Progress Bars Grid */}
-        <div className="flex flex-row flex-wrap gap-8 justify-center items-center">
+        <div className="flex flex-row flex-wrap gap-8 justify-between">
           {raifStyleSkills.map((skill, idx) => (
-            <div key={idx} className="flex flex-col gap-2 w-full md:w-[calc(50%-1rem)] text-center items-center">
+            <div key={idx} className="flex flex-col gap-2 w-full md:w-[calc(50%-1rem)]">
               
-              <div className="flex flex-row justify-between font-semibold text-sm text-[#111827] w-full">
-                <span className="text-center">{skill.name}</span>
-                <span className="font-bold text-[#059669]">{skill.percentage}%</span>
+              <div className="flex flex-row justify-between items-center font-semibold text-sm text-[#111827] w-full">
+                <span>{skill.name}</span>
+                <span className="font-bold text-[#059669] shrink-0">{skill.percentage}%</span>
               </div>
 
               {/* Bar track */}
@@ -34,8 +34,8 @@ export default function SkillsSection() {
                 />
               </div>
 
-              {/* Badges row - Centered */}
-              <div className="flex flex-row gap-2 pt-1 justify-center items-center">
+              {/* Badges row */}
+              <div className="flex flex-row gap-2 pt-1 items-center">
                 <span className="bg-[#059669] rounded text-white text-xs font-semibold px-2.5 py-0.5">
                   {skill.level}
                 </span>
