@@ -10,16 +10,16 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[#064e3b] text-white" id="footer">
-      <main className="flex flex-col gap-10 py-16 px-4 md:px-8 md:max-w-[1200px] md:mx-auto text-left">
+      <main className="flex flex-col gap-10 py-16 px-4 md:px-8 max-w-[1200px] mx-auto text-center items-center">
         
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 border-b border-emerald-800 pb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 border-b border-emerald-800 pb-8 w-full">
           
           {/* Logo & Name */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 justify-center">
             <div className="w-10 h-10 rounded-lg bg-[#059669] text-white flex items-center justify-center font-bold shadow-md">
               <Shield className="w-6 h-6" />
             </div>
-            <div>
+            <div className="text-center sm:text-left">
               <span className="text-xl sm:text-2xl font-extrabold font-heading block text-white">Harshni Couppoussamy</span>
               <span className="text-xs text-emerald-200 font-mono">Cyber Security Analyst & IAM Specialist</span>
             </div>
@@ -92,9 +92,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-6 border-t border-emerald-800 text-xs text-emerald-300 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+        <div className="pt-6 border-t border-emerald-800 text-xs text-emerald-300 text-center w-full">
           <p>© 2026 Harshni Couppoussamy. All rights reserved.</p>
-          <p>Portfolio Website based on raifkaya.nl design</p>
         </div>
 
       </main>

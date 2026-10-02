@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -11,7 +11,8 @@
   --text-dark: #064e3b;
   --text-muted: #4b5563;
   
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 }
 
 * {
@@ -51,6 +52,7 @@ body::-webkit-scrollbar-thumb {
 h1, h2, h3, h4, h5, h6 {
   color: #111827;
   font-weight: 800;
+  font-family: var(--font-heading);
 }
 
 /* Custom Morphing Avatar Frame */
