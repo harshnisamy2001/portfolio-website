@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #1770b5;
+  --primary-hover: #135c96;
+  --primary-light: #38abff;
+  --primary-bg: #ffffff;
+  --section-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Raif Kaya Blue Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #1770b5;
+  border-radius: 9999px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+/* Custom Morphing Avatar Frame */
+#selfie {
+  background-image: url(/images/selfie.jpg);
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #1770b5;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 400px;
+  width: 300px;
+  animation: morph 8s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 20px 40px -15px rgba(23, 112, 181, 0.25);
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* Navigation link active state */
+header a.active {
+  border-bottom-width: 3px;
+  border-color: #1770b5;
+  color: #1770b5;
+}
+
+/* Right Arrow Indicator for Contact Pills */
+.right-arrow::before {
+  border: 10px solid transparent;
+  border-left-color: #ffffff;
+  content: "";
+  left: 100%;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+/* Custom Collapsible Card Animation */
+.card-hover-expand {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-expand:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(23, 112, 181, 0.2);
+}
