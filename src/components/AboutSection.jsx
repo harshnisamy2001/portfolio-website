@@ -28,7 +28,7 @@ export default function AboutSection() {
           </div>
 
           {/* Narrative Paragraphs */}
-          <div className="flex flex-col gap-4 text-center md:text-left text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+          <div className="flex flex-col gap-4 text-center items-center text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             <p>
               Hi, I am Harshni Couppoussamy, located in London, United Kingdom. My passion lies in Cyber Security, Identity & Access Management (IAM), and Risk Governance. I ensure that security is engineered directly into live enterprise platforms to safeguard sensitive corporate and customer data.
             </p>

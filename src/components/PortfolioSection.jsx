@@ -21,38 +21,38 @@ export default function PortfolioSection() {
           {portfolioProjects.map((proj) => (
             <div
               key={proj.id}
-              className="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col justify-between card-hover-expand text-left"
+              className="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col justify-between card-hover-expand text-center items-center"
             >
-              <div>
+              <div className="w-full">
                 {/* Image Banner */}
-                <div className="relative h-48 sm:h-56 bg-slate-900 overflow-hidden">
+                <div className="relative h-48 sm:h-56 bg-slate-900 overflow-hidden text-center">
                   <img
                     src={proj.image}
                     alt={proj.title}
                     className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <span className="px-2.5 py-1 rounded bg-[#059669] text-white text-xs font-semibold font-mono">
+                  <div className="absolute bottom-3 left-4 right-4 text-center">
+                    <span className="px-2.5 py-1 rounded bg-[#059669] text-white text-xs font-semibold font-mono inline-block">
                       {proj.subtitle}
                     </span>
                   </div>
                 </div>
 
                 {/* Content Box */}
-                <div className="p-6 space-y-4">
-                  <h4 className="text-xl font-bold text-[#111827]">
+                <div className="p-6 space-y-4 text-center flex flex-col items-center">
+                  <h4 className="text-xl font-bold text-[#111827] text-center">
                     {proj.title}
                   </h4>
 
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed text-center">
                     {proj.description}
                   </p>
 
-                  <ul className="space-y-2 pt-2 border-t border-slate-100">
+                  <ul className="space-y-2 pt-2 border-t border-slate-100 text-center flex flex-col items-center w-full">
                     {proj.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <span className="w-4 h-4 rounded-full bg-[#059669]/10 text-[#059669] flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                      <li key={idx} className="flex items-center justify-center gap-2.5 text-xs text-slate-700 text-center">
+                        <span className="w-4 h-4 rounded-full bg-[#059669]/10 text-[#059669] flex items-center justify-center shrink-0 font-bold">
                           ✓
                         </span>
                         <span className="leading-snug">{detail}</span>

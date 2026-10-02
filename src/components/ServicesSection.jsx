@@ -31,17 +31,17 @@ export default function ServicesSection() {
             return (
               <div
                 key={srv.id}
-                className="flex flex-col gap-4 rounded-xl p-6 md:p-8 border border-[#059669]/20 bg-white hover:border-[#059669] shadow-sm hover:shadow-md transition-all text-left group"
+                className="flex flex-col items-center text-center gap-4 rounded-xl p-6 md:p-8 border border-[#059669]/20 bg-white hover:border-[#059669] shadow-sm hover:shadow-md transition-all group"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#059669]/10 text-[#059669] flex items-center justify-center group-hover:bg-[#059669] group-hover:text-white transition-all">
+                <div className="w-12 h-12 rounded-xl bg-[#059669]/10 text-[#059669] flex items-center justify-center group-hover:bg-[#059669] group-hover:text-white transition-all mx-auto">
                   <IconComp className="w-6 h-6" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#111827] group-hover:text-[#059669] transition-colors">
+                <h3 className="text-2xl font-bold text-[#111827] group-hover:text-[#059669] transition-colors text-center">
                   {srv.title}
                 </h3>
 
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed text-center">
                   {srv.description}
                 </p>
               </div>

@@ -17,25 +17,25 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Progress Bars Grid */}
-        <div className="flex flex-row flex-wrap gap-8 justify-between">
+        <div className="flex flex-row flex-wrap gap-8 justify-center items-center">
           {raifStyleSkills.map((skill, idx) => (
-            <div key={idx} className="flex flex-col gap-2 w-full md:w-[calc(50%-1rem)] text-left">
+            <div key={idx} className="flex flex-col gap-2 w-full md:w-[calc(50%-1rem)] text-center items-center">
               
-              <div className="flex flex-row justify-between font-semibold text-sm text-[#111827]">
-                <span>{skill.name}</span>
+              <div className="flex flex-row justify-between font-semibold text-sm text-[#111827] w-full">
+                <span className="text-center">{skill.name}</span>
                 <span className="font-bold text-[#059669]">{skill.percentage}%</span>
               </div>
 
               {/* Bar track */}
-              <div className="bg-slate-200 rounded-full h-3 overflow-hidden">
+              <div className="bg-slate-200 rounded-full h-3 overflow-hidden w-full">
                 <div
                   className="bg-[#059669] h-3 rounded-full transition-all duration-1000"
                   style={{ width: `${skill.percentage}%` }}
                 />
               </div>
 
-              {/* Badges row */}
-              <div className="flex flex-row gap-2 pt-1">
+              {/* Badges row - Centered */}
+              <div className="flex flex-row gap-2 pt-1 justify-center items-center">
                 <span className="bg-[#059669] rounded text-white text-xs font-semibold px-2.5 py-0.5">
                   {skill.level}
                 </span>
