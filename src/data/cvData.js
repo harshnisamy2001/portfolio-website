@@ -3,7 +3,6 @@ export const personalInfo = {
   title: "Cyber Security Analyst & IAM Specialist",
   tagline: "Hi, My name is Harshni Couppoussamy, a Cyber Security Analyst & MSc Cybersecurity Technology student at Northumbria University London with 2.5+ years of experience at Accenture.",
   email: "harshni.couppoussamy@northumbria.ac.uk",
-  personalEmail: "harshnisamy2001@gmail.com",
   phone: "07799663823",
   phoneFormatted: "+44 7799 663823",
   location: "London, United Kingdom",

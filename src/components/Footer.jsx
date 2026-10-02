@@ -9,19 +9,19 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#1f2937] text-white" id="footer">
+    <footer className="w-full bg-[#064e3b] text-white" id="footer">
       <main className="flex flex-col gap-10 py-16 px-4 md:px-8 md:max-w-[1200px] md:mx-auto text-left">
         
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 border-b border-slate-700 pb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 border-b border-emerald-800 pb-8">
           
           {/* Logo & Name */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-[#1770b5] text-white flex items-center justify-center font-bold">
+            <div className="w-10 h-10 rounded-lg bg-[#059669] text-white flex items-center justify-center font-bold shadow-md">
               <Shield className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-xl sm:text-2xl font-extrabold font-heading block">Harshni Couppoussamy</span>
-              <span className="text-xs text-slate-400 font-mono">Cyber Security Analyst & IAM Specialist</span>
+              <span className="text-xl sm:text-2xl font-extrabold font-heading block text-white">Harshni Couppoussamy</span>
+              <span className="text-xs text-emerald-200 font-mono">Cyber Security Analyst & IAM Specialist</span>
             </div>
           </div>
 
@@ -31,21 +31,21 @@ export default function Footer() {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-[#1770b5] transition-colors"
+              className="p-2.5 rounded-lg bg-[#047857] text-emerald-100 hover:text-white hover:bg-[#059669] transition-colors"
               aria-label="LinkedIn"
             >
               <LinkedInIcon className="w-5 h-5" />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="p-2.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-[#1770b5] transition-colors"
+              className="p-2.5 rounded-lg bg-[#047857] text-emerald-100 hover:text-white hover:bg-[#059669] transition-colors"
               aria-label="Academic Mail"
             >
               <Mail className="w-5 h-5" />
             </a>
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-[#1770b5] transition-colors cursor-pointer"
+              className="p-2.5 rounded-lg bg-[#047857] text-emerald-100 hover:text-white hover:bg-[#059669] transition-colors cursor-pointer"
               aria-label="Back to Top"
               title="Back to Top"
             >
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Navigation Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-xs text-slate-400">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-xs text-emerald-200">
           <div>
             <div className="uppercase font-bold text-white mb-3 text-sm">Navigation</div>
             <ul className="flex flex-col gap-2">
@@ -85,14 +85,14 @@ export default function Footer() {
 
           <div>
             <div className="uppercase font-bold text-white mb-3 text-sm">Availability</div>
-            <p className="leading-relaxed text-[#38abff] font-semibold">
+            <p className="leading-relaxed text-[#34d399] font-semibold">
               Open for UK Roles from Oct 2026
             </p>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="pt-6 border-t border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+        <div className="pt-6 border-t border-emerald-800 text-xs text-emerald-300 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
           <p>© 2026 Harshni Couppoussamy. All rights reserved.</p>
           <p>Portfolio Website based on raifkaya.nl design</p>
         </div>

@@ -1,18 +1,17 @@
 import React from 'react';
-import { Check, Shield, FileText } from 'lucide-react';
 import { portfolioProjects } from '../data/cvData';
 
 export default function PortfolioSection() {
   return (
-    <section className="w-full bg-[#f8fafc] border-b border-slate-200/80" id="portfolio">
-      <main className="flex flex-col gap-10 py-24 px-4 md:px-8 md:max-w-[1200px] md:mx-auto">
+    <section className="w-full bg-[#f0fdf4]/50 border-b border-emerald-100" id="portfolio">
+      <main className="flex flex-col gap-10 py-20 sm:py-24 px-4 md:px-8 max-w-[1200px] mx-auto">
         
         {/* Section Title */}
         <div className="text-center">
-          <h2 className="text-sm uppercase text-[#1770b5] font-bold mx-auto pb-1 w-max">
+          <h2 className="text-sm uppercase text-[#059669] font-bold mx-auto pb-1 w-max">
             Portfolio
           </h2>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1f2937]">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#111827]">
             Key Security Projects & Applied Research
           </h3>
         </div>
@@ -22,7 +21,7 @@ export default function PortfolioSection() {
           {portfolioProjects.map((proj) => (
             <div
               key={proj.id}
-              className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between card-hover-expand text-left"
+              className="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col justify-between card-hover-expand text-left"
             >
               <div>
                 {/* Image Banner */}
@@ -34,7 +33,7 @@ export default function PortfolioSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4">
-                    <span className="px-2.5 py-1 rounded bg-[#1770b5] text-white text-xs font-semibold font-mono">
+                    <span className="px-2.5 py-1 rounded bg-[#059669] text-white text-xs font-semibold font-mono">
                       {proj.subtitle}
                     </span>
                   </div>
@@ -42,7 +41,7 @@ export default function PortfolioSection() {
 
                 {/* Content Box */}
                 <div className="p-6 space-y-4">
-                  <h4 className="text-xl font-bold text-[#1f2937]">
+                  <h4 className="text-xl font-bold text-[#111827]">
                     {proj.title}
                   </h4>
 
@@ -53,7 +52,7 @@ export default function PortfolioSection() {
                   <ul className="space-y-2 pt-2 border-t border-slate-100">
                     {proj.details.map((detail, idx) => (
                       <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <span className="w-4 h-4 rounded-full bg-[#1770b5]/10 text-[#1770b5] flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                        <span className="w-4 h-4 rounded-full bg-[#059669]/10 text-[#059669] flex items-center justify-center shrink-0 mt-0.5 font-bold">
                           ✓
                         </span>
                         <span className="leading-snug">{detail}</span>

@@ -38,65 +38,68 @@ export default function Header({ onOpenCv }) {
 
   return (
     <>
-      <header className="flex flex-row items-center justify-between bg-white border-b border-[#1770b5]/20 px-4 md:px-8 fixed w-full h-[75px] z-50 shadow-sm top-0 left-0">
-        
-        {/* Brand Logo */}
-        <a href="#home" className="flex items-center gap-2.5 cursor-pointer text-[#1f2937] hover:text-[#1770b5] transition-colors shrink-0">
-          <div className="w-9 h-9 rounded-lg bg-[#1770b5] text-white flex items-center justify-center font-bold">
-            <Shield className="w-5 h-5" />
-          </div>
-          <span className="font-extrabold tracking-tight text-lg sm:text-xl">Harshni Couppoussamy</span>
-        </a>
-
-        {/* Navigation Links & Primary Top CV Button */}
-        <div className="flex items-center gap-6">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#059669]/20 shadow-sm h-[75px]">
+        {/* CENTERED CONTAINER ALIGNED WITH 1200px MAIN SITE GRID */}
+        <div className="flex flex-row items-center justify-between h-full px-4 md:px-8 max-w-[1200px] mx-auto w-full">
           
-          {/* Nav Items (Desktop & Tablet) */}
-          <ul className="hidden lg:flex flex-row gap-6 items-center font-medium text-[#1f2937]">
-            {menuItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={item.href}
-                  className={`py-5 text-sm font-semibold transition-all hover:text-[#1770b5] ${
-                    activeSection === item.id ? 'active text-[#1770b5] border-b-2 border-[#1770b5]' : ''
-                  }`}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {/* Brand Logo */}
+          <a href="#home" className="flex items-center gap-2.5 cursor-pointer text-[#1f2937] hover:text-[#059669] transition-colors shrink-0">
+            <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-[#059669] to-[#10b981] text-white flex items-center justify-center font-bold shadow-md shadow-[#059669]/20">
+              <Shield className="w-5 h-5" />
+            </div>
+            <span className="font-extrabold tracking-tight text-lg sm:text-xl">Harshni Couppoussamy</span>
+          </a>
 
-          {/* SINGLE DEDICATED PREVIEW / DOWNLOAD CV BUTTON AT THE TOP */}
-          <button
-            onClick={onOpenCv}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1770b5] hover:bg-[#135c96] text-white font-bold text-xs sm:text-sm shadow-md transition-all cursor-pointer shrink-0"
-            title="Preview & Download CV"
-          >
-            <FileText className="w-4 h-4" />
-            <span>Preview / Download CV</span>
-          </button>
+          {/* Navigation Links & Primary Top CV Button */}
+          <div className="flex items-center gap-4 lg:gap-6">
+            
+            {/* Nav Items (Desktop & Tablet) */}
+            <ul className="hidden lg:flex flex-row gap-5 xl:gap-6 items-center font-medium text-[#1f2937]">
+              {menuItems.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.href}
+                    className={`py-5 text-sm font-semibold transition-all hover:text-[#059669] ${
+                      activeSection === item.id ? 'active text-[#059669] border-b-2 border-[#059669]' : ''
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-          {/* Mobile Menu Icon */}
-          <div className="lg:hidden">
+            {/* SINGLE DEDICATED PREVIEW / DOWNLOAD CV BUTTON AT THE TOP */}
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#1770b5] hover:text-[#135c96]"
-              aria-label="Toggle menu"
+              onClick={onOpenCv}
+              className="flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#047857] hover:to-[#059669] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#059669]/20 transition-all cursor-pointer shrink-0"
+              title="Preview & Download CV"
             >
-              {mobileMenuOpen ? <X className="w-7 h-7" /> : <MenuIcon className="w-7 h-7" />}
+              <FileText className="w-4 h-4" />
+              <span>Preview / Download CV</span>
             </button>
-          </div>
 
+            {/* Mobile Menu Icon */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-[#059669] hover:text-[#047857]"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <X className="w-7 h-7" /> : <MenuIcon className="w-7 h-7" />}
+              </button>
+            </div>
+
+          </div>
         </div>
       </header>
 
       {/* Spacer for fixed 75px header */}
       <div className="h-[75px]" />
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed top-[75px] left-0 right-0 bg-white border-b border-[#1770b5]/20 shadow-xl z-40 py-5 px-6">
+        <div className="lg:hidden fixed top-[75px] left-0 right-0 bg-white border-b border-[#059669]/20 shadow-xl z-40 py-5 px-6">
           <ul className="flex flex-col gap-4 text-center font-medium">
             {menuItems.map((item) => (
               <li key={item.id}>
@@ -104,7 +107,7 @@ export default function Header({ onOpenCv }) {
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block py-2 text-base font-semibold ${
-                    activeSection === item.id ? 'text-[#1770b5] font-bold' : 'text-[#1f2937]'
+                    activeSection === item.id ? 'text-[#059669] font-bold' : 'text-[#1f2937]'
                   }`}
                 >
                   {item.name}
