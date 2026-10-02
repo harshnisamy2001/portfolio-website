@@ -47,7 +47,7 @@ export default function Header({ onOpenCv }) {
             <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-[#059669] to-[#10b981] text-white flex items-center justify-center font-bold shadow-md shadow-[#059669]/20">
               <Shield className="w-5 h-5" />
             </div>
-            <span className="font-extrabold tracking-tight text-lg sm:text-xl">Harshni Couppoussamy</span>
+            <span className="font-extrabold tracking-tight text-lg sm:text-xl"><span className="md:hidden">Harshni</span><span className="hidden md:inline">Harshni Couppoussamy</span></span>
           </a>
 
           {/* Navigation Links & Primary Top CV Button */}
